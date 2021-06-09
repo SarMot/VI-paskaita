@@ -8,7 +8,7 @@
     <style>
       .flex-container { 
           display: flex;
-           flex-direction: column;
+           flex-direction: row;
           flex-wrap: wrap ;
         }   
 
@@ -87,6 +87,19 @@
         p { 
            font-size: 32px;
         } 
+        .kvadratelis { 
+           width: 50px;
+           height: 50px ;
+           margin: 10px ;
+           background-color: blue;
+        } 
+
+        [class *="flex-item-"] { 
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+
 
         @media screen and (max-width: 720px) {
             .flex-container {
@@ -108,8 +121,16 @@
         <h1>Flex pavyzdys</h1>
       <div class="flex-container"> 
           <!-- flex -->
-          <div class="flex-item-1 "><p>1</p></div>
-           <div class="flex-item-2 zalsva"><p>2</p></div>
+          <div class="flex-item-1 ">
+              <p>1</p>
+              <div class="kvadratelis">
+               </div>
+              <div class="kvadratelis">
+              </div>
+            </div>
+           <div class="flex-item-2 zalsva">
+               <p>2</p>
+            </div>
            <div class="flex-item-3 zydra"><p>3</p></div>
            <div class="flex-item-4 rozine"><p>4</p></div>
            <div class="flex-item-5 geltona"><p>5</p></div>
