@@ -6,21 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      .flex-container { 
+          display: flex;
+           flex-direction: column;
+          flex-wrap: wrap ;
+        }   
+
+       .flex-item-1 { 
+           width: 100%;
+           background-color: silver;
+        }  
+
+        .flex-item-2, .flex-item-3 { 
+           width: 50%;
+        }  
+
+        .flex-item-4 { 
+          width: 70%;
+        }  
+
+        .flex-item-5 { 
+           width: 30%;
+        }   
+        .flex-item-6, .flex-item-7, .flex-item-8 { 
+          width: 33.330%;
+        }   
         
+        .raudona {
+          background-color: red;
+        } 
+
+        .geltona {
+            background-color: yellow;
+        } 
+
+        .zydra {
+            background-color: aquamarine;
+        } 
+
+        .zalsva {
+          background-color: aqua;   
+        } 
+
+        .rozine {
+            background-color: pink;
+        } 
+
+        p { 
+           font-size: 32px;
+        } 
+
+        @media screen and (max-width: 720px) {
+            .flex-container {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }   
+            [ class *="flex-item-"] {
+               width: 100%;
+            }
+              
+        } 
+
     </style>
 </head>
 <body>
-    <div class="conteiner">
+    <div class="container">
+       
         <h1>Flex pavyzdys</h1>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-        <div class="Flex item"></div>
-    </div>
+      <div class="flex-container"> 
+          <div class="flex-item-1 "><p>1</p></div>
+           <div class="flex-item-2 zalsva"><p>2</p></div>
+           <div class="flex-item-3 zydra"><p>3</p></div>
+           <div class="flex-item-4 rozine"><p>4</p></div>
+           <div class="flex-item-5 geltona"><p>5</p></div>
+           <div class="flex-item-6 rozine"><p>6</p></div>
+           <div class="flex-item-7 geltona"><p>7</p></div>
+           <div class="flex-item-8 zalsva"><p>8</p></div>
+           <div class="flex-item-9 "><p>9</p></div>
 
+           <h1 class="Tekstas">Flex tekstas</h1>
+
+           <!--flex-->
+        </div>
+    </div>
 </body>
 </html>
